@@ -1,5 +1,6 @@
 var express = require('express')
 var app = express()
+var bodyParser = require('body-parser');
 
 var fs = require('fs');
 var Web3 = require('web3');
@@ -54,6 +55,10 @@ fs.readFile('build/contracts/Oracle.json', (error, json) => {
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 app.get('/', function(request, response) {
     oracleInstance.sendMessage("hi john", "12082273646", {from:account}).then(function(tx){
@@ -65,7 +70,7 @@ app.get('/', function(request, response) {
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 app.post('/sms', (req, res) => {
-    console.log(req);
+    console.log(req.body);
     const twiml = new MessagingResponse();
     twiml.message('The Robots are no longer coming!');
     res.writeHead(200, {'Content-Type': 'text/xml'});
