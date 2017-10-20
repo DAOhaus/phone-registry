@@ -1,0 +1,21 @@
+{
+  "contract_name": "Registry",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x60606040523415600e57600080fd5b5b5b5b603680601e6000396000f30060606040525b600080fd00a165627a7a723058205055f2cb124c4c58b9ef335dfdb255e82c0d09cf04831675c5c822c8bba406330029",
+  "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0xef1c4d49aab06955f7be50ee5338fae94bf6301b",
+      "updated_at": 1508483674419
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1508483674419
+}
