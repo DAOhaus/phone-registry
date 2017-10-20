@@ -25,6 +25,7 @@
     "fs": "0.0.1-security",
     "ngrok": "^2.2.23",
     "truffle-contract": "^3.0.0",
+    "truffle-hdwallet-provider": "0.0.3",
     "twilio": "^3.8.1",
     "web3": "^0.19.1"
   }
