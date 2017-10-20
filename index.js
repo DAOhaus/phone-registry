@@ -32,7 +32,7 @@ var sendMessage = function(user, proposalId, text, to){
 }
 
 fs.readFile('build/contracts/Oracle.json', (error, json) => {
-    const json = JSON.parse(json);
+    var json = JSON.parse(json);
     const Oracle = contract(json);
 
     Oracle.setProvider(web3.currentProvider);
